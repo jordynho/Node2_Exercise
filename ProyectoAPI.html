@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Star Wars API</title>
+</head>
+<body>
+  <h1>Star Wars Info</h1>
+  <label for="nombreDePersonaje">Nombre de Personaje:</label>
+  <input type="text" id="nombreDePersonaje">
+  <button onclick="informacionPersonaje()">Buscar</button>
+  <div id="characterInfo"></div>
+
+  <script>
+    //src="./index.js";
+
+    async function informacionPersonaje(){
+       
+        let personaje = document.getElementById("nombreDePersonaje").value;
+        let respuesta = await fetch("http://localhost:3000/getAll");
+        const data = await response.json();
+        return data;
+
+        switch(personaje){
+            case 1: (personaje === "Obi-wan Kenoby");
+            resp.end(JSON.stringify(personajes));
+            break;
+            case 2: (personaje === "Darth Vader");
+
+            break;
+            case 3: (personaje === "Boba Fett");
+
+            break;
+            default:
+            console.log("Personaje no encontrado");
+        };
+
+
+
+    };
+  </script>
+
+
+</body>
+</html>
+
